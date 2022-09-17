@@ -1,0 +1,4 @@
+{
+    "terminal.integrated.defaultProfile.linux": "/bin/bash",
+    "terminal.integrated.automationShell.linux": "/bin/bash"
+}
