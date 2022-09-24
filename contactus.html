@@ -24,19 +24,27 @@
     <header class="jumbotron jumbotron-fluid">
         <div class="container">
             <div class="row">
-                <div class="col">
-                    <h1>NuCamp</h1>
-                    <h2>a better way to camp</h2>
-                </div>
+            <div class="col-4 col-sm-3 col-md-2 align-self-center">
+                <a href="index.html"><img src="img/logo.png" class="img-fluid" /></a>
+            </div>
+            <div class="col">
+                <h1>NuCamp</h1>
+                <h2>a better way to camp</h2>
             </div>
         </div>
-    </header>
+    </div>
+</header>
 
-    <nav class="navbar navbar-expand-sm navbar-dark sticky-top">
-        <div class="container">
-            <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#nucampNavbar">
-                <span class="navbar-toggler-icon"></span>
-            </button>
+<!------------------Navbar: Understand this by going through slowly--------------------------->
+<nav class="navbar navbar-expand-sm navbar-dark sticky-top">
+    <!-- navbar-dark made the text white versus blue  since navbar is dark -->
+    <!-- ****sticky-top makes it stay at the top -->
+    <div class="container">
+        <a class="navbar-brand" href="index.html"><img src="img/logo.png" height="30" width="30"/></a>           
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#nucampNavbar">
+            <!-- class "ml-auto" pushes it to the right-- removed after adding logo (since you don't need it anymore- not sure why doesn't go to the left once removed) -->
+            <span class="navbar-toggler-icon"></span>
+        </button>
             <div class="collapse navbar-collapse" id="nucampNavbar">
                 <ul class="navbar-nav">
                     <li class="nav-item"><a class="nav-link" href="index.html"><i class="fa fa-home fa-lg"></i> Home</a></li>
@@ -131,7 +139,9 @@
         </form>
     </div>
 
-    <footer>
+    <footer class="site-footer">
+        <!-- Because added another footer to the card on About US page during the quote, must change class of this 
+            footer**ON ALL PAGES**  AND change from element footer to site-footer class on your css file to site-footer-->
         <div class="container">
             <div class="row">
                 <div class="col-4 col-sm-2 offset-1">

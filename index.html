@@ -26,6 +26,9 @@
         <!-- to eliminate the space in upper right corner with rounded edges on jumbotron  -->
         <div class="container">
             <div class="row">
+                <div class="col-4 col-sm-3 col-md-2 align-self-center">
+                    <a href="index.html"><img src="img/logo.png" class="img-fluid" /></a>
+                </div>
                 <div class="col">
                     <h1>NuCamp</h1>
                     <h2>a better way to camp</h2>
@@ -39,8 +42,9 @@
         <!-- navbar-dark made the text white versus blue  since navbar is dark -->
         <!-- ****sticky-top makes it stay at the top -->
         <div class="container">
-            <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#nucampNavbar">
-                <!-- ml-auto pushes it to the right -->
+            <a class="navbar-brand" href="index.html"><img src="img/logo.png" height="30" width="30"/></a>           
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#nucampNavbar">
+                <!-- class "ml-auto" pushes it to the right-- removed after adding logo (since you don't need it anymore- not sure why doesn't go to the left once removed) -->
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="nucampNavbar">
@@ -66,8 +70,17 @@
                 <!-- Moved the text to the right with class="text-sm-right" -->
             </div>
             <div class="col">
-                <h3>Our Campsites</h3>
-                <p class="d-none d-sm-block">Explore our growing database of curated campsites and leave your own reviews!</p>
+                <div class="media">
+                    <!-- wrap the entire image AND wording in div media -->
+                    <img class="d-flex mr-3 img-thumbnail" src="img/breadcrumb-trail-thumb.jpg" alt="Breadrumb Trail thumbnail" />
+                    <!-- d-flex, img thumbnail gives it rounded border, mr-3 adds a margin to the right, 
+                        ****d-flex is added bc recommended 
+                        to deal with a bug in IE 10&11 with media objects-->
+                    <div class="media-body align-self-center">
+                        <h3>Our Campsites</h3>
+                        <p class="d-none d-sm-block">Explore our growing database of curated campsites and leave your own reviews!</p>
+                    </div>
+                    </div>
             </div>
         </div>
 
@@ -88,15 +101,22 @@
                 <h2 class="text-sm-right">Our Community Partners</h2>
             </div>
             <div class="col">
-                <h3>Bootstrap Outfitters</h3>
-                <p class="d-none d-sm-block">Bootstrap Outfitters supplies you with gear you need at prices you can't beat.</p>
+                <div class="media">
+                    <img class="d-flex mr-3 img-thumbnail" src="img/bootstrap-thumb.png" alt="Bootstrap Outfitters" />
+                       <div class="media-body align-self-center">
+                            <h3>Bootstrap Outfitters</h3>
+                            <p class="d-none d-sm-block">Bootstrap Outfitters supplies you with gear you need at prices you can't beat.</p>
+                        </div>
+                </div>
             </div>
         </div>
     
     </div>
 
 
-    <footer>
+    <footer class=""site-footer>
+        <!-- Because added another footer to the card on About US page during the quote, must change class of this 
+            footer**ON ALL PAGES**  AND change from element footer to site-footer class on your css file to site-footer-->
         <div class="container">
             <div class="row">
                 <div class="col-4 offset-1 col-sm-2">
