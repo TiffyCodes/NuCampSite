@@ -34,7 +34,9 @@
                     <h2>a better way to camp</h2>
                 </div>
                 <div class="col-md-4 col-xl-2 mt-4">
-                    <a href="#reserveForm" class="text-nowrap"><button type="button" class="btn btn-lg btn-info">Reserve Campsite</button></a>
+                    <!-- turned the a href into a tooltip- as in when you hover it helps you understand or provides more content, see added JS with more info at bottom-->
+                    <!-- the end where it says data-html="true" allows <br /> and <strong> to work versus showing as text content-->
+                    <a href="#reserveForm" role="button" class="text-nowrap"><button type="button" class="btn btn-lg btn-info" data-toggle="tooltip" data-placement="bottom" title="Or call us at <br /> <strong>1-206-555-1234</strong>" data-html="true">Reserve Campsite</button></a>
                 <!-- text-nowrap keeps the two words of the button on same line even in larger screen sizes where it moves to two-->
                 </div>
             </div>
@@ -213,6 +215,15 @@
     <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
     <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
     <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+
+    <script>
+        // **IMP TO ADD: Added the below to allow tool tips which also uses popper js above, then 
+        // add the toolpit with an anchor to button to make reservations
+        // add: data-toggle="tooltip" title="
+        $(function () {
+            $(`[data-toggle="tooltip"]`).tooltip()
+        })
+    </script>
 
 </body>
 
