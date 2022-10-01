@@ -36,87 +36,13 @@
                 <div class="col-md-4 col-xl-2 mt-4">
                     <!-- turned the a href into a tooltip- as in when you hover it helps you understand or provides more content, see added JS with more info at bottom-->
                     <!-- the end where it says data-html="true" allows <br /> and <strong> to work versus showing as text content-->
-                            <!-- RESERVE CAMPSITE BUTTON WITH TOOL TIP
-                                <a href="#reserveForm" role="button" class="text-nowrap btn btn-lg btn-info" data-toggle="tooltip" data-placement="bottom" title="Or call us at <br /> <strong>1-206-555-1234</strong>" data-html="true">Reserve Campsite</a>
-                            -->
-                        <!-- text-nowrap keeps the two words of the button on same line even in larger screen sizes where it moves to two-->
-                
-                <!-- Week III workshop Assmt : Add Modal (replaced tooltip and reserve button above) -->
-                <button type="button" class="text-nowrap btn btn-lg btn-info" data-toggle="modal" data-target="#reserveModal">Reserve Campsite</button>
+                    <a href="#reserveForm" role="button" class="text-nowrap"><button type="button" class="btn btn-lg btn-info" data-toggle="tooltip" data-placement="bottom" title="Or call us at <br /> <strong>1-206-555-1234</strong>" data-html="true">Reserve Campsite</button></a>
+                <!-- text-nowrap keeps the two words of the button on same line even in larger screen sizes where it moves to two-->
                 </div>
             </div>
 
         </div>
-
-
-        
     </header>
-    <!------ Week III Workshop -- Actual modal connected to button above-->
-            <!-- Add role="dialog" for accessibility reasons-->
-            <div id="reserveModal" class="modal fade" role="dialog">
-                <div class="modal-dialog modal-lg" role="document">
-                    <div class="modal-content">
-                        <div class="modal-header bg-info text-white">
-                            <h3 class="modal-title">Reserve Campsite</h3>
-                            <button type="button" class="close" data-dismiss="modal">&times;</button>
-                        </div>
-                        <div class="modal-body">
-                            <div class="container-fluid">
-                                <form>
-                                    <div class="form-group row">
-                                        <label for="numCampers" class="col-sm-6 col-form-label">Number of Campers</label>
-                                        <div class="col">
-                                            <select name="numCampers" id="numCampers" class="form-control">
-                                                <!-- Form-control you use with any inputs on forms to make it exapand
-                                                and look pretty for mobile, so on this, the select drop-down and the date selection-->
-                                                <option selected>Select...</option>
-                                                <option value="1">1</option>
-                                                <option value="2">2</option>
-                                                <option value="3">3</option>
-                                                <option value="4">4</option>
-                                                <option value="5">5</option>
-                                                <option value="6">6</option>
-                                            </select>
-                                        </div>
-        
-                                    </div>
-                                    <div class="form-group row">
-                                        <label for="date" class="col-sm-6 col-form-label">Date</label>
-                                        <div class="col">
-                                            <input type="date" name="date" id="date" value="#" class="form-control">
-                                            <!-- Form-control you use with any inputs on forms to make it exapand
-                                                and look pretty for mobile, so on this, the select drop-down and the date selection-->
-                                        </div>
-                                    </div>
-
-                                    <div class=" form-group row">
-                                        <label for="campsiteType" class="col-sm-6 col-form-label">Campsite Type</label>
-                                        <div class="col-2 btn-group btn-group-toggle" data-toggle="buttons">
-                                            <label class="btn btn-success active">
-                                                <input type="radio" name="siteType" id="siteTent" autocomplete="off" checked> Tent
-                                              </label>
-                                              <label class="btn btn-primary">
-                                                <input type="radio" name="siteType" id="siteRV" autocomplete="off"> RV
-                                              </label>
-                                              
-
-                                        </div>
-                                    </div>
-                                    <div class=" form-group row">
-                                        <div class="col">
-                                            <button type="button" class="btn btn-secondary data-dismiss-modal">Cancel</button>
-                                            <button type="submit" class="btn btn-primary">Search</button>
-                                        </div>
-                                    </div>
-                                    
-                                </form>
-                            </div>
-                            
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!--------------- END OF MODAL -->
 
 <!------------------Navbar: Understand this by going through slowly--------------------------->
     <nav class="navbar navbar-expand-sm navbar-dark sticky-top">
@@ -132,7 +58,7 @@
                 <ul class="navbar-nav">
                     <!-- The above together (under nav and ul) will cause it to expand horizontally for small enough viewports -->
                     <!-- <i and fa comes from "font awesome" which includes icons- you downloaded to folder -->
-                    <li class="nav-item active"><a class="nav-link" href="#"><i class="fa fa-home fa-lg"></i> Home</a></li>
+                    <li class="nav-item active"><a class="nav-link" href="#"><i class="fa fa-home fa-lg"> Home</i></a></li>
                     <!-- # means to go to the top of the page -->
                     <li class="nav-item"><a class="nav-link" href="aboutus.html"><i class="fa fa-info fa-lg"></i> About</a></li>
                     <li class="nav-item"><a class="nav-link" href="#"><i class="fa fa-list fa-lg"></i> Sites</a></li>
@@ -142,7 +68,7 @@
                 <!-- Button for a modal, A modal is a pop up window for a login or to show a picture that disables the back page but allows you to see it -->
                 <span class="navbar-text ml-auto">
                     <a role="button" data-toggle="modal" data-target="#loginModal">
-                        <i class="fa fa-sign-in"> Login</i>
+                        <i class="fa fa-sign-in" style="color: #1be2db;"> Login</i>
                     </a>
                 </span>
                 <!--- End of creation of button and modal is below  closing nav element-->
@@ -194,60 +120,7 @@
 <!--------------------------------------------->
 
     <div class="container">
-<!----------------------CAROUSEL------------->
-        <div class="row row-content">
-            <div class="col-md-8 mx-auto">
-                <!-- mx-auto will center it-->
-                <div id="homeCarousel" class="carousel slide" data-ride="carousel">
-                    <!-- data ride tells it to start upon pg load, carousel slide makes it look smooth-->
-                    
-                    <ol class="carousel-indicators">
-                        <li data-target="#homeCarousel" data-slide-to="0" class="active"></li>
-                        <li data-target="#homeCarousel" data-slide-to="1" class="active"></li>
-                        <li data-target="#homeCarousel" data-slide-to="2" class="active"></li>
-                    </ol>
 
-
-                    
-                    <div class="carousel-inner">
-                        <div class="carousel-item active">
-                            <img class="d-block w-100" src="img/breadcrumb-trail.jpg" alt="Breadcrumb Trail Campground" />
-                            <div class="carousel-caption">
-                                <h3>Breadcrumb Trail Campground</h3>
-                                <p class="d-none d-sm-block">Let Nucamp be your guide to this off-the-beaten-path, hike-in-only campground.</p>
-                                <!-- d-none and d-sm-block makes it responsive so only shows up on viewports small and up-->
-                            </div>
-                        </div>
-                        <div class="carousel-item">
-                            <img class="d-block w-100" src="img/react-lake.jpg" alt="React Lake Campground" />
-                            <div class="carousel-caption">
-                                <h3>React Lake Campground</h3>
-                                <p class="d-none d-sm-block">Nestled in the foothills of the Chrome Mountains, this campground on the shores of the pristine React Lake is a favorite for fly fishers.</p>
-                                <!-- d-none and d-sm-block makes it responsive so only shows up on viewports small and up-->
-                            </div>
-                        </div>
-                        <div class="carousel-item">
-                            <img class="d-block w-100" src="img/chrome-river.jpg" alt="Chrome River Campground" />
-                            <div class="carousel-caption">
-                                <h3>Chrome River Campground</h3>
-                                <p class="d-none d-sm-block">Spend a few sunny days and starry nights beneath a canopy of old-growth firs at this enchanting spot by the Chrome River.</p>
-                                <!-- d-none and d-sm-block makes it responsive so only shows up on viewports small and up-->
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Carousel controle-->
-                        <a class="carousel-control-prev" href="#homeCarousel" role="button" data-slide="prev">
-                            <span class="carousel-control-prev-icon"></span>
-                            <span class="sr-only">Previous</span>
-                        </a>
-                        <a class="carousel-control-next" href="#homeCarousel" role="button" data-slide="next">
-                            <span class="carousel-control-next-icon"></span>
-                            <span class="sr-only">Next</span>
-                        </a>
-                    <!-- ------->
-                </div>
-            </div>
-        </div>
 
         <div class ="row row-content  align-items-center">
             <!-- row-content is not a bootstrap class, so we will define it ubder css-->
@@ -302,46 +175,102 @@
             </div>
         </div>
 
+        <!----------------------CAROUSEL------------->
+        <div class="row row-content">
+            <div class="col-md-8 mx-auto">
+                <!-- mx-auto will center it-->
+                <h3>Take a look at your options...</h3>
+                <div id="homeCarousel" class="carousel slide" data-ride="carousel" style="border-color: #03928d;  border-width: 5px;">
+                    <!-- data ride tells it to start upon pg load, carousel slide makes it look smooth-->
+                    
+                    <ol class="carousel-indicators">
+                        <li data-target="#homeCarousel" data-slide-to="0" class="active"></li>
+                        <li data-target="#homeCarousel" data-slide-to="1" class="active"></li>
+                        <li data-target="#homeCarousel" data-slide-to="2" class="active"></li>
+                    </ol>
+
+
+                    
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img class="d-block w-100" src="img/breadcrumb-trail.jpg" alt="Breadcrumb Trail Campground" />
+                            <div class="carousel-caption">
+                                <h3>Breadcrumb Trail Campground</h3>
+                                <p class="d-none d-sm-block">Let Nucamp be your guide to this off-the-beaten-path, hike-in-only campground.</p>
+                                <!-- d-none and d-sm-block makes it responsive so only shows up on viewports small and up-->
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img class="d-block w-100" src="img/react-lake.jpg" alt="React Lake Campground" />
+                            <div class="carousel-caption">
+                                <h3>React Lake Campground</h3>
+                                <p class="d-none d-sm-block">Nestled in the foothills of the Chrome Mountains, this campground on the shores of the pristine React Lake is a favorite for fly fishers.</p>
+                                <!-- d-none and d-sm-block makes it responsive so only shows up on viewports small and up-->
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img class="d-block w-100" src="img/chrome-river.jpg" alt="Chrome River Campground" />
+                            <div class="carousel-caption">
+                                <h3>Chrome River Campground</h3>
+                                <p class="d-none d-sm-block">Spend a few sunny days and starry nights beneath a canopy of old-growth firs at this enchanting spot by the Chrome River.</p>
+                                <!-- d-none and d-sm-block makes it responsive so only shows up on viewports small and up-->
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Carousel controle-->
+                        <a class="carousel-control-prev" href="#homeCarousel" role="button" data-slide="prev">
+                            <span class="carousel-control-prev-icon"></span>
+                            <span class="sr-only">Previous</span>
+                        </a>
+                        <a class="carousel-control-next" href="#homeCarousel" role="button" data-slide="next">
+                            <span class="carousel-control-next-icon"></span>
+                            <span class="sr-only">Next</span>
+                        </a>
+                    <!-- ------->
+                </div>
+            </div>
+        </div>
+<!---------------------------->
+
 <!-- ---------------------- Card with form-->
-        <!-- <div class="row row-content">
+        <div class="row row-content">
             <div class="col-sm-6 mx-auto">
                 <div class="card">
                     <h3 class="card-header bg-info text-white">Reserve a Campsite</h3>
                     <div class="card-body">
-                        <form id="reserveForm"> -->
-                            <!--  Moved out of card and put in modal with "Reserve a Campsite"
+                        <form id="reserveForm">
                             <div class="form-group row">
-                                <label for="numCampers" class="col-sm-6 col-form-label">Number of Campers</label>
+                                <label for="nuCampers" class="col-sm-6 col-form-label">Number of Campers</label>
                                 <div class="col">
-                                    <select name="numCampers" id="numCampers" class="form-control">
-                                        < Form-control you use with any inputs on forms to make it exapand
+                                    <select name="nuCampers" id="nuCampers" class="form-control">
+                                        <!-- Form-control you use with any inputs on forms to make it exapand
                                         and look pretty for mobile, so on this, the select drop-down and the date selection-->
-                                        <!-- <option selected>Select...</option>
-                                        <option value="1">1</option>
-                                        <option value="2">2</option>
-                                        <option value="3">3</option>
-                                        <option value="4">4</option>
-                                        <option value="5">5</option>
-                                        <option value="6">6</option>
+                                        <option>Select...</option>
+                                        <option>1</option>
+                                        <option>2</option>
+                                        <option>3</option>
+                                        <option>4</option>
+                                        <option>5</option>
+                                        <option>6</option>
                                     </select>
                                 </div>
 
-                            </div> -->
-                            <!-- <div class=" form-group row">
+                            </div>
+                            <div class=" form-group row">
                                 <label for="date" class="col-sm-6 col-form-label">Date</label>
                                 <div class="col">
                                     <input type="date" name="date" id="date" value="#" class="form-control">
-                                    Form-control you use with any inputs on forms to make it exapand
+                                    <!-- Form-control you use with any inputs on forms to make it exapand
                                         and look pretty for mobile, so on this, the select drop-down and the date selection-->
-                                <!-- </div> -->
-                            <!-- </div> 
+                                </div>
+                            </div>
                             <div class=" form-group row">
                                 <div class="col">
                                     <button type="submit" class="btn btn-primary">Search</button>
                                 </div>
 
-                            </div> -->
-                        <!-- </form>
+                            </div>
+                        </form>
 
                     </div>
 
@@ -349,7 +278,7 @@
 
             </div>
             
-        </div> -->
+        </div>
  <!-- ---------------------- -->
     
     </div>
@@ -357,7 +286,7 @@
     
 
 
-    <footer class="site-footer">
+    <footer class=""site-footer>
         <!-- Because added another footer to the card on About US page during the quote, must change class of this 
             footer**ON ALL PAGES**  AND change from element footer to site-footer class on your css file to site-footer-->
         <div class="container">
@@ -396,14 +325,14 @@
     <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
     <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
 
-    <!-- <script>
+    <script>
         // **IMP TO ADD: Added the below to allow tool tips which also uses popper js above, then 
         // add the toolpit with an anchor to button to make reservations
         // add: data-toggle="tooltip" title="
-                $(function () {
-                    $(`[data-toggle="tooltip"]`).tooltip()
-                })
-    </script> -->
+        $(function () {
+            $(`[data-toggle="tooltip"]`).tooltip()
+        })
+    </script>
 
 </body>
 
