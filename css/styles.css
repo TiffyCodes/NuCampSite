@@ -62,3 +62,13 @@ a, a:hover {
 .carousel {
     border: solid #5537DD;
 }
+
+
+/* putting buttons at bottom right of parent container, which is the carousel; z-index: 100 makes it overlay on top instead of hidden beneath */
+#carouselButton {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index: 100;
+
+}

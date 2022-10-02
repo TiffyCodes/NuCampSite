@@ -244,7 +244,20 @@
                             <span class="carousel-control-next-icon"></span>
                             <span class="sr-only">Next</span>
                         </a>
-                    <!-- ------->
+                    <!-- ------------------------------------------>
+
+                    <!-- below are the play/pause buttons to use jquery; will be on carousel, insert right below carousel-->
+                    <div class="btn-group" id="carouselButton">
+                        <button class="btn btn-danger btn-sm" id="carouselPause">
+                            <!-- BTN-DANGER MAKES IT RED AND THE SM MAKES IT SMALL-->
+                            <i class="fa fa-pause"></i>
+                        </button>
+                        <button class="btn btn-danger btn-sm" id="carouselPlay">
+                            <i class="fa fa-play"></i>
+                        </button>
+                    </div>
+
+
                 </div>
             </div>
         </div>
@@ -395,15 +408,31 @@
     <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
     <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
     <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    
+    // <!--<script>
+    //     // **IMP TO ADD: Added the below to allow tool tips which also uses popper js above, then 
+    //     // add the toolpit with an anchor to button to make reservations
+    //     // add: data-toggle="tooltip" title="
+    //             $(function () {
+    //                 $(`[data-toggle="tooltip"]`).tooltip()
+    //             })
+    // </script>  -->
 
-    <!-- <script>
-        // **IMP TO ADD: Added the below to allow tool tips which also uses popper js above, then 
-        // add the toolpit with an anchor to button to make reservations
-        // add: data-toggle="tooltip" title="
-                $(function () {
-                    $(`[data-toggle="tooltip"]`).tooltip()
-                })
-    </script> -->
+
+    // <!-- adding jQuery scripts.. $ means you will start some jQuerry  **Can aslo write $(document).ready(function() .. and it will do the same) -->
+    <script>
+        $(function() {
+            $(".carousel").carousel( { interval: 2000});
+                // If click pause will pause using fx below
+                $("#carouselPause").click(function(){
+                    $(".carousel").carousel("pause");
+                });
+                // If click play, will play using the fx
+                $("#carouselPlay").click(function(){
+                    $(".carousel").carousel("cycle");
+                });
+        });
+    </script>
 
 </body>
 
