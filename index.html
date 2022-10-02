@@ -247,15 +247,16 @@
                     <!-- ------------------------------------------>
 
                     <!-- below are the play/pause buttons to use jquery; will be on carousel, insert right below carousel-->
-                    <div class="btn-group" id="carouselButton">
-                        <button class="btn btn-danger btn-sm" id="carouselPause">
+                    
+                        <button class="btn btn-danger btn-sm" id="carouselButton">
                             <!-- BTN-DANGER MAKES IT RED AND THE SM MAKES IT SMALL-->
                             <i class="fa fa-pause"></i>
                         </button>
-                        <button class="btn btn-danger btn-sm" id="carouselPlay">
+                        <!-- Delete play and remove the div both buttons were in to make it only one play/pause -->
+                        <!-- <button class="btn btn-danger btn-sm" id="carouselPlay">
                             <i class="fa fa-play"></i>
-                        </button>
-                    </div>
+                        </button> -->
+                    
 
 
                 </div>
@@ -422,14 +423,19 @@
     // <!-- adding jQuery scripts.. $ means you will start some jQuerry  **Can aslo write $(document).ready(function() .. and it will do the same) -->
     <script>
         $(function() {
-            $(".carousel").carousel( { interval: 2000});
+            $(".carousel").carousel( { interval: 2000 });
                 // If click pause will pause using fx below
-                $("#carouselPause").click(function(){
+                $("#carouselButton").click(function(){
                     $(".carousel").carousel("pause");
-                });
-                // If click play, will play using the fx
-                $("#carouselPlay").click(function(){
-                    $(".carousel").carousel("cycle");
+                    if ($("#carouselButton").children("i").hasClass("fa-pause")) {
+                        $(".carousel").carousel("pause");
+                        $("#carouselButton").children("i").removeClass("fa-pause");
+                        $("#carouselButton").children("i").addClass("fa-play");
+                    } else {
+                        $(".carousel").carousel("cycle");
+                        $("#carouselButton").children("i").removeClass("fa-pause";
+                        $("#carouselButton"))
+                    }
                 });
         });
     </script>
