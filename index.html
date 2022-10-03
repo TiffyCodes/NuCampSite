@@ -83,20 +83,20 @@
                                     <div class="form-group row">
                                         <label for="date" class="col-sm-6 col-form-label">Date</label>
                                         <div class="col">
-                                            <input type="date" name="date" id="date" value="#" class="form-control">
+                                            <input type="date" name="date" id="date" class="form-control" placeholder="Date">
                                             <!-- Form-control you use with any inputs on forms to make it exapand
                                                 and look pretty for mobile, so on this, the select drop-down and the date selection-->
                                         </div>
                                     </div>
 
                                     <div class=" form-group row">
-                                        <label for="campsiteType" class="col-sm-6 col-form-label">Campsite Type</label>
+                                        <label class="col-sm-6 col-form-label">Campsite Type</label>
                                         <div class="col-2 btn-group btn-group-toggle" data-toggle="buttons">
                                             <label class="btn btn-success active">
-                                                <input type="radio" name="siteType" id="siteTent" autocomplete="off" checked> Tent
+                                                <input type="radio" name="siteType" id="siteTent" value="tent" autocomplete="off" checked> Tent
                                               </label>
                                               <label class="btn btn-primary">
-                                                <input type="radio" name="siteType" id="siteRV" autocomplete="off"> RV
+                                                <input type="radio" name="siteType" id="siteRV" value="RV" autocomplete="off"> RV
                                               </label>
                                               
 
@@ -142,7 +142,8 @@
                 <!-- Button for a modal, A modal is a pop up window for a login or to show a picture that disables the back page but allows you to see it -->
                 <span class="navbar-text ml-auto">
                     <a role="button" data-toggle="modal" data-target="#loginModal">
-                        <i class="fa fa-sign-in"> Login</i>
+                        <i class="fa fa-sign-in"> </i>Login
+                        <!-- the closing </i> needs to go BEFORE any text that is after the icon -->
                     </a>
                 </span>
                 <!--- End of creation of button and modal is below  closing nav element-->
@@ -203,8 +204,8 @@
                     
                     <ol class="carousel-indicators">
                         <li data-target="#homeCarousel" data-slide-to="0" class="active"></li>
-                        <li data-target="#homeCarousel" data-slide-to="1" class="active"></li>
-                        <li data-target="#homeCarousel" data-slide-to="2" class="active"></li>
+                        <li data-target="#homeCarousel" data-slide-to="1" ></li>
+                        <li data-target="#homeCarousel" data-slide-to="2"></li>
                     </ol>
 
 
@@ -433,8 +434,8 @@
                         $("#carouselButton").children("i").addClass("fa-play");
                     } else {
                         $(".carousel").carousel("cycle");
-                        $("#carouselButton").children("i").removeClass("fa-pause";
-                        $("#carouselButton"))
+                        $("#carouselButton").children("i").removeClass("fa-pause");
+                        $("#carouselButton").children("i").addClass("fa-pause");
                     }
                 });
         });
