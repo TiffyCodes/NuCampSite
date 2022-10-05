@@ -7,15 +7,17 @@
     <!-- **New with html 5- makes it responsive web design to device, scale 1 is the initial zoom level for a webpage-->
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css" />
-
-    <!-- Additional CSS must be placed after Bootstrap CSS **Your CSS can go here AFTER aove to override bootstrap-->
+    <!-- Additional CSS must be placed after Bootstrap CSS (1st one listed) **Your CSS can go here AFTER aove to override bootstrap-->
     <!-- Additional CSS must be placed after Bootstrap CSS -->
+    <!-- Below, we sandwich the CSS so usemin knows where to grab them (compiling for deployment- see Week $ exercise 2-->
+    <!-- build:css css/main.css -->
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css" />
     <link rel="stylesheet" href="node_modules/bootstrap-social/bootstrap-social.css" />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lobster|Open+Sans" />
     <link rel="stylesheet" href="css/styles.css" />
+    <!-- endbuild -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lobster|Open+Sans" />
+    
 
     <title>NuCamp: A Better Way To Camp</title>
 </head>
@@ -406,10 +408,13 @@
         </div>
     </footer>
 
-    <!-- jQuery must come first, then Popper.js, then the Bootstrap JavaScript plugins.-->
+    <!-- jQuery must come first, then Popper.js, then the Bootstrap JavaScript plugins.**And below is for compiling for deploy-- must have-->
+    <!-- build:js js/main.js -->
     <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
     <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
     <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="js/scripts.js"></script>
+    <!-- endbuild -->
     
     // <!--<script>
     //     // **IMP TO ADD: Added the below to allow tool tips which also uses popper js above, then 
