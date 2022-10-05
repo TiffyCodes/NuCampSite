@@ -420,25 +420,26 @@
     //             })
     // </script>  -->
 
-
+<!-- ****MOVED TO scripts.js so can deploy -->
     // <!-- adding jQuery scripts.. $ means you will start some jQuerry  **Can aslo write $(document).ready(function() .. and it will do the same) -->
-    <script>
-        $(function() {
-            $(".carousel").carousel( { interval: 2000 });
-                // If click pause will pause using fx below
-                $("#carouselButton").click(function(){
-                    $(".carousel").carousel("pause");
-                    if ($("#carouselButton").children("i").hasClass("fa-pause")) {
-                        $(".carousel").carousel("pause");
-                        $("#carouselButton").children("i").removeClass("fa-pause");
-                        $("#carouselButton").children("i").addClass("fa-play");
-                    } else {
-                        $(".carousel").carousel("cycle");
-                        $("#carouselButton").children("i").removeClass("fa-pause");
-                        $("#carouselButton").children("i").addClass("fa-pause");
-                    }
-                });
-        });
+    <script src="js/scripts.js">
+//  ****MOVED TO scripts.js so can deploy
+        // $(function() {
+        //     $(".carousel").carousel( { interval: 2000 });
+        //         // If click pause will pause using fx below
+        //         $("#carouselButton").click(function(){
+        //             $(".carousel").carousel("pause");
+        //             if ($("#carouselButton").children("i").hasClass("fa-pause")) {
+        //                 $(".carousel").carousel("pause");
+        //                 $("#carouselButton").children("i").removeClass("fa-pause");
+        //                 $("#carouselButton").children("i").addClass("fa-play");
+        //             } else {
+        //                 $(".carousel").carousel("cycle");
+        //                 $("#carouselButton").children("i").removeClass("fa-pause");
+        //                 $("#carouselButton").children("i").addClass("fa-pause");
+        //             }
+        //         });
+        // });
     </script>
 
 </body>
