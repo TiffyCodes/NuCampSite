@@ -44,7 +44,9 @@
                         <!-- text-nowrap keeps the two words of the button on same line even in larger screen sizes where it moves to two-->
                 
                 <!-- Week III workshop Assmt : Add Modal (replaced tooltip and reserve button above) -->
-                <button type="button" class="text-nowrap btn btn-lg btn-info" data-toggle="modal" data-target="#reserveModal">Reserve Campsite</button>
+                <!-- <button type="button" class="text-nowrap btn btn-lg btn-info" data-toggle="modal" data-target="#reserveModal">Reserve Campsite</button> -->
+                <!-- Replacing above w/ jQuery -->
+                <button type="button" class="text-nowrap btn btn-lg btn-info" id="reserveButton">Reserve a Campsite</button>
                 </div>
             </div>
 
@@ -58,8 +60,10 @@
             <div id="reserveModal" class="modal fade" role="dialog">
                 <div class="modal-dialog modal-lg" role="document">
                     <div class="modal-content">
-                        <div class="modal-header bg-info text-white">
-                            <h3 class="modal-title">Reserve Campsite</h3>
+                        <!-- <div class="modal-header bg-info text-white"> -->
+                            <!-- Replacing with the BelowloginButton -->
+                            <div class="modal-header">
+                            <h3 class="modal-title">Reserve a Campsite</h3>
                             <button type="button" class="close" data-dismiss="modal">&times;</button>
                         </div>
                         <div class="modal-body">
@@ -106,7 +110,7 @@
                                     </div>
                                     <div class=" form-group row">
                                         <div class="col">
-                                            <button type="button" class="btn btn-secondary data-dismiss-modal">Cancel</button>
+                                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
                                             <button type="submit" class="btn btn-primary">Search</button>
                                         </div>
                                     </div>
@@ -143,7 +147,9 @@
                 
                 <!-- Button for a modal, A modal is a pop up window for a login or to show a picture that disables the back page but allows you to see it -->
                 <span class="navbar-text ml-auto">
-                    <a role="button" data-toggle="modal" data-target="#loginModal">
+                    <!-- <a role="button" data-toggle="modal" data-target="#loginModal"> -->
+                        <!-- Replacing with jQuery -->
+                        <a role="button" id="loginButton"> 
                         <i class="fa fa-sign-in"> </i>Login
                         <!-- the closing </i> needs to go BEFORE any text that is after the icon -->
                     </a>
@@ -428,7 +434,7 @@
 <!-- ****MOVED TO scripts.js so can deploy -->
     // <!-- adding jQuery scripts.. $ means you will start some jQuerry  **Can aslo write $(document).ready(function() .. and it will do the same) -->
     <script src="js/scripts.js">
-//  ****MOVED TO scripts.js so can deploy
+//  ****MOVED TO scripts.js so can deploy-- p.s. for any jquery, can wrap all in 1 ready fx which is $(function) {}
         // $(function() {
         //     $(".carousel").carousel( { interval: 2000 });
         //         // If click pause will pause using fx below
